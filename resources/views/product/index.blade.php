@@ -5,38 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>La Vitrina Estelar — Productos</title>
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-	<style>
-		:root{--bg:#0f172a;--card:#0b1220;--accent:#ff9900;--muted:#94a3b8}
-		*{box-sizing:border-box}
-		body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;background:linear-gradient(180deg,#071026 0%,#0b1220 60%);color:#e6eef8;-webkit-font-smoothing:antialiased}
-		.wrap{max-width:1200px;margin:48px auto;padding:24px}
-		.header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
-		.title{font-size:28px;font-weight:700;letter-spacing:-0.02em}
-		.subtitle{color:var(--muted);font-weight:500;font-size:14px}
-		.search{display:flex;gap:12px;align-items:center}
-		.search input{padding:10px 14px;border-radius:999px;border:none;background:rgba(255,255,255,0.06);color:inherit;outline:none;min-width:260px}
-		.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px}
-		.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;padding:14px;box-shadow:0 6px 18px rgba(2,6,23,0.6);transition:transform .18s ease,box-shadow .18s ease;border:1px solid rgba(255,255,255,0.03)}
-		.card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(2,6,23,0.75)}
-		.image{border-radius:8px;overflow:hidden;height:140px;background:#071426;display:flex;align-items:center;justify-content:center}
-		.image img{width:100%;height:100%;object-fit:cover;display:block}
-		.meta{display:flex;align-items:center;justify-content:space-between;margin-top:10px}
-		.name{font-weight:600;font-size:15px}
-		.price{font-weight:700;color:var(--accent);font-size:16px}
-		.rating{color:#ffd166;font-size:13px;margin-right:6px}
-		.row{display:flex;align-items:center;gap:8px}
-		.badge{background:linear-gradient(90deg,#0b6cff,#6a3bff);padding:6px 8px;border-radius:8px;color:white;font-size:12px;font-weight:600}
-		.desc{color:var(--muted);font-size:13px;margin-top:8px}
-		.actions{display:flex;gap:8px;margin-top:12px}
-		.btn{flex:1;padding:10px;border-radius:10px;border:none;cursor:pointer;font-weight:700}
-		.btn-primary{background:linear-gradient(90deg,var(--accent),#ff7a00);color:#081126}
-		.btn-outline{background:transparent;border:1px solid rgba(255,255,255,0.06);color:inherit}
-		.prime{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:#bfe9ff;background:rgba(11,115,255,0.08);padding:6px;border-radius:8px}
-		@media (max-width:520px){.header{flex-direction:column;align-items:flex-start;gap:12px}.search input{min-width:160px}}
-	</style>
+	<link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 <body>
-	<div class="wrap">
+	<div class="wrap page-index">
 		<div class="header">
 			<div>
 				<div class="title">La Vitrina Estelar</div>
