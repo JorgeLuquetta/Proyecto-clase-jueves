@@ -8,6 +8,9 @@
 	<link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 <body>
+
+	@include('layout.navbar')
+
 	<div class="wrap page-index">
 		<div class="header">
 			<div>
@@ -92,5 +95,8 @@
 			</div>
 		</div>
 	</div>
+
+	@include('layout.footer')
+
 </body>
 </html>

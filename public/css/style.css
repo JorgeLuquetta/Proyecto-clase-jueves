@@ -100,3 +100,23 @@ a.cancel{display:inline-flex;align-items:center;gap:8px;color:#bcd9ff;text-decor
 @media (max-width:860px){.card{grid-template-columns:1fr;grid-auto-rows:auto}.media{height:280px}}
 
 /* Fin del CSS consolidado */
+
+/* Navbar & Footer */
+nav.navbar{background:linear-gradient(90deg,rgba(11,28,50,0.95),rgba(15,23,42,0.95));backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,0.06);padding:14px 20px;position:sticky;top:0;z-index:100;box-shadow:0 4px 12px rgba(2,6,23,0.4)}
+.navbar-container{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+.navbar-brand{font-size:18px;font-weight:700;color:#f8fbff;text-decoration:none;display:flex;align-items:center;gap:10px}
+.navbar-links{display:flex;gap:20px;list-style:none;margin:0;padding:0}
+.navbar-links a{color:#c9dcef;text-decoration:none;font-weight:600;font-size:14px;transition:color .2s ease}
+.navbar-links a:hover{color:var(--accent)}
+
+footer{background:linear-gradient(180deg,rgba(7,16,38,0.8),rgba(5,12,28,0.95));border-top:1px solid rgba(255,255,255,0.06);padding:32px 20px 20px;margin-top:60px}
+.footer-container{max-width:800px;margin:0 auto;text-align:center}
+.footer-content{display:grid;grid-template-columns:1fr;gap:24px;margin-bottom:24px;place-items:center}
+.footer-section{min-width:200px}
+.footer-section h3{font-size:14px;font-weight:700;color:#f8fbff;margin:0 0 12px 0;text-transform:uppercase;letter-spacing:0.05em}
+.footer-section ul{list-style:none;margin:0;padding:0}
+.footer-section ul li{margin-bottom:8px}
+.footer-section a{color:#9fbfcf;text-decoration:none;font-size:13px;transition:color .2s ease}
+.footer-section a:hover{color:var(--accent)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.06);padding-top:16px;text-align:center;color:#6b8196;font-size:12px}
+.footer-bottom p{margin:0}

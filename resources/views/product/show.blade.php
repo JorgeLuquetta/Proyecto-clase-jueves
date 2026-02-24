@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 <body>
+    
+    @include('layout.navbar')
+
     <div class="wrap">
         <a href="{{ url('product') }}" class="back">← Volver a La Vitrina</a>
 
@@ -44,5 +47,8 @@
             </div>
         </div>
     </div>
+
+    @include('layout.footer')
+
 </body>
 </html>

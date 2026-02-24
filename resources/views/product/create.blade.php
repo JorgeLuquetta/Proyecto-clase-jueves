@@ -8,6 +8,9 @@
 	<link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 <body>
+	
+	@include('layout.navbar')
+
 	<div class="container">
 		<div class="card">
 			<h1>Crear nuevo producto</h1>
@@ -49,5 +52,8 @@
 			</form>
 		</div>
 	</div>
+
+	@include('layout.footer')
+	
 </body>
 </html>
