@@ -6,9 +6,8 @@
 			<h1>Crear nuevo producto</h1>
 			<p class="lead">Completa los campos para añadir un producto a La Vitrina Estelar.</p>
 
-			<form method="POST" action="{{ url('/products') }}" enctype="multipart/form-data">
+			<form action="{{ route('product.store') }}" method="POST" enctype="multipart/form-data">
 				@csrf
-
 				<label for="name">Nombre</label>
 				<input id="name" name="name" type="text" value="{{ old('name') }}" required placeholder="Ej: Auriculares inalámbricos Pro X">
 				@error('name')<div class="error">{{ $message }}</div>@enderror
@@ -25,13 +24,11 @@
 				<input id="image" name="image" type="file" accept="image/*">
 				@error('image')<div class="error">{{ $message }}</div>@enderror
 
-				<label for="state">Estado</label>
+				<label for="state">Categoría</label>
 				<select id="state" name="state" required style="width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:rgba(255,255,255,0.02);color:inherit">
-					<option value="">Selecciona un estado</option>
-					<option value="disponible" {{ old('state')=='disponible' ? 'selected' : '' }}>Disponible</option>
-					<option value="agotado" {{ old('state')=='agotado' ? 'selected' : '' }}>Agotado</option>
-					<option value="preventa" {{ old('state')=='preventa' ? 'selected' : '' }}>Preventa</option>
-					<option value="descontinuado" {{ old('state')=='descontinuado' ? 'selected' : '' }}>Descontinuado</option>
+					@foreach ($categoryList as $category)
+						<option value="{{ $category->id }}">{{ $category->name }}</option>
+					@endforeach
 				</select>
 				@error('state')<div class="error">{{ $message }}</div>@enderror
 
