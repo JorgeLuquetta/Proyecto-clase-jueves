@@ -20,9 +20,9 @@
 				<textarea id="description" name="description" required placeholder="Breve descripción del producto">{{ old('description') }}</textarea>
 				@error('description')<div class="error">{{ $message }}</div>@enderror
 
-				<label for="image">Imagen del producto</label>
-				<input id="image" name="image" type="file" accept="image/*">
-				@error('image')<div class="error">{{ $message }}</div>@enderror
+				<label for="imagen">Imagen del producto</label>
+				<input id="imagen" name="imagen" type="file" accept="image/*">
+				@error('imagen')<div class="error">{{ $message }}</div>@enderror
 
 				<label for="state">Categoría</label>
 				<select id="state" name="state" required style="width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:rgba(255,255,255,0.02);color:inherit">

@@ -18,8 +18,19 @@
 			@foreach ($misProductos as $product)
 			<!-- Producto 1 -->
 			<div class="card">
-				<div class="image"><img src="https://source.unsplash.com/600x400/?headphones" alt="Auriculares inalámbricos"></div>
+				<div class="image">
+					
+				@if ($product->image)
+						<img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}" class="product-image">
+					@else
+						<img src="https://cdn-icons-png.flaticon.com/512/7910/7910160.png" alt="Imagen no disponible">
+					@endif
+				</div>
+				
 				<div class="meta">
+					
+						
+
 					<div class="row"><div class="rating">★★★★★</div><div class="name">{{ $product->name }}</div></div>
 					<div class="price">{{ $product->price }}</div>
 				</div>
