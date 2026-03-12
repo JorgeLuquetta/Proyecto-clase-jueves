@@ -29,7 +29,18 @@ class ProductController extends Controller
         ]);
     }
 
+    
     public function store(Request $request){
+        //VALIDACION
+        $request->validate([
+            'name' => 'required|min:3|max:255',
+            'price' => 'required|numeric',
+            'description' => 'required',
+            'imagen' => 'required|image',
+            'state' => 'required|exists:categories,id'
+        ]);
+
+
         //dd($request->all());
 
         $newProduct = new Product();
