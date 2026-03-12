@@ -38,6 +38,11 @@
 				<div class="actions">
 					<button class="btn btn-primary">Añadir al carrito</button>
 					<button class="btn btn-outline">Ver</button>
+					<form action="{{ route('product.destroy', $product) }}" method="POST">
+						@method('delete')
+						@csrf
+					<button class="btn btn-danger">Eliminar</button>
+				</form>
 				</div>
 			</div>
 			@endforeach

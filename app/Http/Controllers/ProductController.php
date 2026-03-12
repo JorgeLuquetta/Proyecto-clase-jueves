@@ -63,4 +63,9 @@ class ProductController extends Controller
     public function show($producto){
         return view('product.show');
     }
+
+    public function destroy(Product $producto){
+        $producto->delete();
+        return redirect()->route('product.index');
+    }
 }
