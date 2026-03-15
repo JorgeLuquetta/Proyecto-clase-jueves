@@ -5,7 +5,7 @@
 		<div class="header">
 			<div>
 				<div class="title">La Vitrina Estelar</div>
-				<div class="subtitle">Selección semanal: 5 productos top, curados especialmente para ti</div>
+				<div class="subtitle">Selección semanal:productos top, especialmente para ti</div>
 			</div>
 			<div class="search">
 				<input placeholder="Buscar productos, marcas y más..." aria-label="Buscar">
@@ -37,7 +37,7 @@
 				<div class="desc">{{ $product->description }}</div>
 				<div class="actions">
 					<button class="btn btn-primary">Añadir al carrito</button>
-					<button class="btn btn-outline">Ver</button>
+					<a href="{{ route('product.show', $product) }}" class="btn btn-outline">Ver</a>
 					<form action="{{ route('product.destroy', $product) }}" method="POST">
 						@method('delete')
 						@csrf
