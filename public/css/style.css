@@ -49,6 +49,10 @@ body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helveti
 .image img{width:100%;height:100%;object-fit:cover;display:block}
 .meta{display:flex;align-items:center;justify-content:space-between;margin-top:10px}
 .name{font-weight:600;font-size:15px}
+.meta {display: flex;flex-direction: column;align-items: flex-start;gap: 4px;}
+.row {display: flex;align-items: center;gap: 8px;width: 100%;}
+.price {margin-top: 2px;font-size: 16px;font-weight: 800;}
+.price {color: #ff9900;font-size: 18px;}
 .price{font-weight:700;color:var(--accent);font-size:16px}
 .rating{color:#ffd166;font-size:13px;margin-right:6px}
 .row{display:flex;align-items:center;gap:8px}
@@ -126,3 +130,19 @@ footer{background:linear-gradient(180deg,rgba(7,16,38,0.8),rgba(5,12,28,0.95));b
 .footer-section a:hover{color:var(--accent)}
 .footer-bottom{border-top:1px solid rgba(255,255,255,0.06);padding-top:16px;text-align:center;color:#6b8196;font-size:12px}
 .footer-bottom p{margin:0}
+
+/* CSS del carrito */
+.card {display: flex;flex-direction: column;justify-content: space-between;height: 100%;overflow: hidden;}
+.name {max-width: 150px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+.desc {overflow: hidden;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;line-clamp: 3;}
+.row {display: flex;justify-content: space-between;align-items: center;gap: 10px;}
+.price {white-space: nowrap;}
+.image img {width: 100%;height: 180px;object-fit: cover;border-radius: 10px;}
+
+.cart-item {display: flex;gap: 20px;align-items: center;border: 1px solid #2a2a2a;padding: 15px;border-radius: 12px;margin-bottom: 15px;background: #0f172a;}
+.cart-image img {width: 120px;height: 120px;object-fit: cover;border-radius: 10px;}
+.cart-info {flex: 1;overflow: hidden;}
+.cart-info h3 {white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+.cart-info p {margin: 2px 0;}
+.cart-info button {margin-top: 8px;}
+.cart-item:hover {transform: scale(1.02);transition: 0.3s;}
