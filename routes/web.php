@@ -7,6 +7,7 @@ use App\Models\Product;
 use App\Models\CartItem;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CategoryController;
 
 Route::get('/', HomeController::class);
 
@@ -19,7 +20,8 @@ Route::get('/admin', function () {
     ];
 
     $latestProducts = Product::latest()->take(5)->get();
-    return view('admin.dashboard', compact('stats', 'latestProducts'));
+    $categories = Category::all();
+    return view('admin.dashboard', compact('stats', 'latestProducts', 'categories'));
 });
 
 Route::prefix('product')->controller(ProductController::class)->group(function (){
@@ -28,4 +30,10 @@ Route::prefix('product')->controller(ProductController::class)->group(function (
     Route::post('/store', 'store')->name('product.store');
     Route::get('/{producto}', 'show')->name('product.show');
     Route::delete('/{producto}', 'destroy')->name('product.destroy');
+});
+
+Route::prefix('admin')->group(function () {
+    Route::post('/category', [CategoryController::class, 'store'])->name('admin.category.store');
+    Route::put('/category/{category}', [CategoryController::class, 'update'])->name('admin.category.update');
+    Route::delete('/category/{category}', [CategoryController::class, 'destroy'])->name('admin.category.destroy');
 });
